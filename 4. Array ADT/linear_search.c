@@ -15,6 +15,13 @@ void Display(struct Array arr)
   printf("%d ",arr.A[i]);
 }
 
+void swap(int *x,int *y)
+{
+  int temp=*x;
+  *x=*y;
+  *y=temp;
+}
+
 int LinearSearch(struct Array *arr,int key)
 {
   int i;
@@ -22,7 +29,7 @@ int LinearSearch(struct Array *arr,int key)
   {
     if(key==arr->A[i])
     {
-
+      swap(&arr->A[i],&arr->A[0]);
       return i;
     }
   }
