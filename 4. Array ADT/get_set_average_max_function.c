@@ -81,6 +81,11 @@ int Sum(struct Array arr)
   return s;
 }
 
+float Average(struct Array arr)
+{
+  return (float)Sum(arr)/arr.length;
+}
+
 int main()
 {
   struct Array arr={{2,3,9,16,18,21,28,32,35},10,9};
@@ -97,5 +102,6 @@ int main()
   printf("\nMaximum element in array is : %d\n",Max(arr));
   printf("Minimum element in array is : %d\n",Min(arr));
   printf("Sum of all elements in array is : %d\n",Sum(arr));
+  printf("Average of elements in array is : %f\n",Average(arr));
   return 0;
 }
