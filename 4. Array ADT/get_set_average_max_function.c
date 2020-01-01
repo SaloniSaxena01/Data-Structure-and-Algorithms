@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <limits.h>
 
 struct Array
 {
@@ -43,9 +44,9 @@ void Set(struct Array *arr,int index,int x)
 
 int Max(struct Array arr)
 {
-  int max=arr.A[0];
+  int max=INT_MIN;
   int i;
-  for(i=1;i<arr.length;i++)
+  for(i=0;i<arr.length;i++)
   {
     if(arr.A[i]>max)
     {
@@ -53,6 +54,20 @@ int Max(struct Array arr)
     }
   }
   return max;
+}
+
+int Min(struct Array arr)
+{
+  int min=INT_MAX;
+  int i;
+  for(i=0;i<arr.length;i++)
+  {
+    if(arr.A[i]<min)
+    {
+      min=arr.A[i];
+    }
+  }
+  return min;
 }
 
 int main()
@@ -69,5 +84,6 @@ int main()
   printf("\n\n\n");
   Display(arr);
   printf("\nMaximum element in array is : %d\n",Max(arr));
+  printf("Minimum element in array is : %d\n",Min(arr));
   return 0;
 }
