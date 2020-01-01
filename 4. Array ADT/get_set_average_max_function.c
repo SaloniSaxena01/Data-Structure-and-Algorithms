@@ -70,6 +70,17 @@ int Min(struct Array arr)
   return min;
 }
 
+int Sum(struct Array arr)
+{
+  int s=0;
+  int i;
+  for(i=0;i<arr.length;i++)
+  {
+    s+=arr.A[i];
+  }
+  return s;
+}
+
 int main()
 {
   struct Array arr={{2,3,9,16,18,21,28,32,35},10,9};
@@ -85,5 +96,6 @@ int main()
   Display(arr);
   printf("\nMaximum element in array is : %d\n",Max(arr));
   printf("Minimum element in array is : %d\n",Min(arr));
+  printf("Sum of all elements in array is : %d\n",Sum(arr));
   return 0;
 }
