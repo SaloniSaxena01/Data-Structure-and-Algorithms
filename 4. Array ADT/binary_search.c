@@ -48,10 +48,35 @@ int BinarySearch(struct Array arr,int key)
 return -1;
 }
 
+int RecursiveBinarySearch(int a[],int l,int h,int key)
+{
+  int mid=0;
+  if(l<=h)
+  {
+    mid=(l+h)/2;
+    if(key==a[mid])
+    {
+      return mid;
+    }
+    else if(key<a[mid])
+    {
+      return RecursiveBinarySearch(a,l,mid-1,key);
+    }
+    else
+    {
+      return RecursiveBinarySearch(a,mid+1,h,key);
+    }
+  }
+  return -1;
+}
+
 int main()
 {
   struct Array arr1={{2,3,9,16,18,21,28,32,35},10,9};
-  printf("%d",BinarySearch(arr1,16));
+  printf("%d",BinarySearch(arr1,32));
+  Display(arr1);
+  printf("\n\n\n");
+  printf("%d",RecursiveBinarySearch(arr1.A,0,arr1.length,21));
   Display(arr1);
   return 0;
 }
