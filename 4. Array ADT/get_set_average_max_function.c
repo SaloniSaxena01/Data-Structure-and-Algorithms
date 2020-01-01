@@ -33,10 +33,21 @@ int Get(struct Array arr,int index)
   return -1;
 }
 
+void Set(struct Array *arr,int index,int x)
+{
+  if(index>=0 && index<arr->length)
+  {
+    arr->A[index]=x;
+  }
+}
+
 int main()
 {
   struct Array arr={{2,3,9,16,18,21,28,32,35},10,9};
   printf("Element at position 9 is : %d\n",Get(arr,9));
   printf("Element at position 2 is : %d\n",Get(arr,2));
+  Display(arr);
+  Set(&arr,0,15);
+  Display(arr);
   return 0;
 }
