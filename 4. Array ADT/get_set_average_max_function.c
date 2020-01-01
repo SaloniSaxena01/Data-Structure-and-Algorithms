@@ -41,13 +41,33 @@ void Set(struct Array *arr,int index,int x)
   }
 }
 
+int Max(struct Array arr)
+{
+  int max=arr.A[0];
+  int i;
+  for(i=1;i<arr.length;i++)
+  {
+    if(arr.A[i]>max)
+    {
+      max=arr.A[i];
+    }
+  }
+  return max;
+}
+
 int main()
 {
   struct Array arr={{2,3,9,16,18,21,28,32,35},10,9};
+  Display(arr);
+  printf("\n\n\n");
   printf("Element at position 9 is : %d\n",Get(arr,9));
   printf("Element at position 2 is : %d\n",Get(arr,2));
+  printf("\n\n\n");
   Display(arr);
   Set(&arr,0,15);
   Display(arr);
+  printf("\n\n\n");
+  Display(arr);
+  printf("\nMaximum element in array is : %d\n",Max(arr));
   return 0;
 }
