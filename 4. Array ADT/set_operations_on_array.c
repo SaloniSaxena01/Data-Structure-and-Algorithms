@@ -76,7 +76,38 @@ struct Array* Intersection(struct Array *arr1,struct Array *arr2)
   }
   arr3->length=k;
   arr3->size=10;
-  
+
+  return arr3;
+}
+
+struct Array* Difference(struct Array *arr1,struct Array *arr2)
+{
+  int i,j,k;
+  i=j=k=0;
+  struct Array *arr3=(struct Array *)malloc(sizeof(struct Array));
+  while(i<arr1->length && j<arr2->length)
+  {
+    if(arr1->A[i]<arr2->A[j])
+    {
+      arr3->A[k++]=arr1->A[i++];
+    }
+    else if(arr2->A[j]<arr1->A[i])
+    {
+      j++;
+    }
+    else
+    {
+      i++;
+      j++;
+    }
+  }
+  for(;i<arr1->length;i++)
+  {
+    arr3->A[k++]=arr1->A[i];
+  }
+  arr3->length=k;
+  arr3->size=10;
+
   return arr3;
 }
 
@@ -86,10 +117,25 @@ int main()
   struct Array arr2={{2,3,9,18,28},10,5};
   struct Array *arr3;
 
+  printf("Array 1\n");
+  Display(arr1);
+  printf("\n\nArray 2\n");
+  Display(arr2);
+
   arr3=Union(&arr1,&arr2);
+  printf("\n\nUnion\n");
   Display(*arr3);
 
   arr3=Intersection(&arr1,&arr2);
+  printf("\n\nIntersection\n");
+  Display(*arr3);
+
+  arr3=Difference(&arr1,&arr2);
+  printf("\n\nDifference b\\w array1 and array2\n");
+  Display(*arr3);
+
+  arr3=Difference(&arr2,&arr1);
+  printf("\n\nDifference b\\w array2 and array1\n");
   Display(*arr3);
 
   return 0;
