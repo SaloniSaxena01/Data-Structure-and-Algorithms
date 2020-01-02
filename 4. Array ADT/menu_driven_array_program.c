@@ -197,7 +197,7 @@ void Reverse(struct Array *arr)
   }
 }
 
-void Reverse2(struct Array *arr)
+void ReverseBySwapping(struct Array *arr)
 {
   int i,j;
   for(i=0,j=arr->length-1;i<j;i++,j--)
@@ -400,9 +400,16 @@ int main()
     printf("4. Linear Search\n");
     printf("5. Binary Search\n");
     printf("6. Recursive Binary Search\n");
-    printf("7. Sum\n");
-    printf("8. Display\n");
-    printf("9.Exit\n");
+    printf("7. Get element at index\n");
+    printf("8. Set element at index\n");
+    printf("9. Maximum element in array\n");
+    printf("10. Minimum element in array\n");
+    printf("11. Sum of elements in array\n");
+    printf("12. Average of elements in array\n");
+    printf("13. Reversing elements in array\n");
+    printf("14. Reversing elements in array by swapping\n");
+    printf("15. Display\n");
+    printf("16.Exit\n");
     printf("Enter you choice ");
     scanf("%d",&ch);
     switch(ch)
@@ -442,17 +449,42 @@ int main()
       printf("Element index %d",index);
       break;
       case 7:
-      printf("Sum is %d\n",Sum(arr1));
+      printf("Enter an index");
+      scanf("%d",&index);
+      printf("Element at position %d is : %d\n",index,Get(arr1,index));
       break;
       case 8:
-      Display(arr1);
+      printf("Enter an element and index");
+      scanf("%d%d",&x,&index);
+      Set(&arr1,index,x);
       break;
       case 9:
+      printf("\nMaximum element in array is : %d\n",Max(arr1));
+      break;
+      case 10:
+      printf("\nMinimum element in array is : %d\n",Min(arr1));
+      break;
+      case 11:
+      printf("Sum is %d\n",Sum(arr1));
+      break;
+      case 12:
+      printf("Average is %f\n",Average(arr1));
+      break;
+      case 13:
+      Reverse(&arr1);
+      break;
+      case 14:
+      ReverseBySwapping(&arr1);
+      break;
+      case 15:
+      Display(arr1);
+      break;
+      case 16:
       printf("Exitting Program...\n");
       break;
       default:
       printf("Wrong Choice\n");
     }
-  }while(ch!=9);
+  }while(ch!=16);
   return 0;
 }
