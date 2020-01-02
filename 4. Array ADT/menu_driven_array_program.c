@@ -234,152 +234,6 @@ int isSorted(struct Array arr)
   return 1;
 }
 
-void Rearrange(struct Array *arr)
-{
-  int i,j;
-  i=0;
-  j=arr->length-1;
-  while(i<j)
-  {
-    while(arr->A[i]<0)
-    {
-      i++;
-    }
-    while(arr->A[j]>=0)
-    {
-      j--;
-    }
-    if(i<j)
-    {
-      swap(&arr->A[i],&arr->A[j]);
-    }
-  }
-}
-
-struct Array* Merge(struct Array *arr1,struct Array *arr2)
-{
-  int i,j,k;
-  i=j=k=0;
-  struct Array *arr3=(struct Array *)malloc(sizeof(struct Array));
-  while(i<arr1->length && j<arr2->length)
-  {
-    if(arr1->A[i]<arr2->A[j])
-    {
-      arr3->A[k++]=arr1->A[i++];
-    }
-    else
-    {
-      arr3->A[k++]=arr2->A[j++];
-    }
-  }
-  for(;i<arr1->length;i++)
-  {
-    arr3->A[k++]=arr1->A[i];
-  }
-  for(;j<arr2->length;j++)
-  {
-    arr3->A[k++]=arr2->A[j];
-  }
-  arr3->length=arr1->length+arr2->length;
-  arr3->size=10;
-
-  return arr3;
-}
-
-struct Array* Union(struct Array *arr1,struct Array *arr2)
-{
-  int i,j,k;
-  i=j=k=0;
-  struct Array *arr3=(struct Array *)malloc(sizeof(struct Array));
-  while(i<arr1->length && j<arr2->length)
-  {
-    if(arr1->A[i]<arr2->A[j])
-    {
-      arr3->A[k++]=arr1->A[i++];
-    }
-    else if(arr2->A[j]<arr1->A[i])
-    {
-      arr3->A[k++]=arr2->A[j++];
-    }
-    else
-    {
-      arr3->A[k++]=arr1->A[i++];
-      j++;
-    }
-  }
-  for(;i<arr1->length;i++)
-  {
-    arr3->A[k++]=arr1->A[i];
-  }
-  for(;j<arr2->length;j++)
-  {
-    arr3->A[k++]=arr2->A[j];
-  }
-  arr3->length=k;
-  arr3->size=10;
-
-  return arr3;
-}
-
-struct Array* Intersection(struct Array *arr1,struct Array *arr2)
-{
-  int i,j,k;
-  i=j=k=0;
-  struct Array *arr3=(struct Array *)malloc(sizeof(struct Array));
-  while(i<arr1->length && j<arr2->length)
-  {
-    if(arr1->A[i]<arr2->A[j])
-    {
-      i++;
-    }
-    else if(arr2->A[j]<arr1->A[i])
-    {
-      j++;
-    }
-    else if(arr1->A[i]==arr2->A[j])
-    {
-      arr3->A[k++]=arr1->A[i++];
-      j++;
-    }
-  }
-  arr3->length=k;
-  arr3->size=10;
-
-  return arr3;
-}
-
-struct Array* Difference(struct Array *arr1,struct Array *arr2)
-{
-  int i,j,k;
-  i=j=k=0;
-  struct Array *arr3=(struct Array *)malloc(sizeof(struct Array));
-  while(i<arr1->length && j<arr2->length)
-  {
-    if(arr1->A[i]<arr2->A[j])
-    {
-      arr3->A[k++]=arr1->A[i++];
-    }
-    else if(arr2->A[j]<arr1->A[i])
-    {
-      j++;
-    }
-    else
-    {
-      i++;
-      j++;
-    }
-  }
-  for(;i<arr1->length;i++)
-  {
-    arr3->A[k++]=arr1->A[i];
-  }
-  arr3->length=k;
-  arr3->size=10;
-
-  return arr3;
-}
-
-
 int main()
 {
   struct Array arr1;
@@ -408,8 +262,10 @@ int main()
     printf("12. Average of elements in array\n");
     printf("13. Reversing elements in array\n");
     printf("14. Reversing elements in array by swapping\n");
-    printf("15. Display\n");
-    printf("16.Exit\n");
+    printf("15. Insert in sorted array to keep sorted\n");
+    printf("16. Check if array is sorted\n");
+    printf("17. Display\n");
+    printf("18.Exit\n");
     printf("Enter you choice ");
     scanf("%d",&ch);
     switch(ch)
@@ -477,14 +333,22 @@ int main()
       ReverseBySwapping(&arr1);
       break;
       case 15:
-      Display(arr1);
+      printf("Enter an element");
+      scanf("%d",&x);
+      InsertSort(&arr1,x);
       break;
       case 16:
+      printf("Is array sorted? %d\n\n\n",isSorted(arr1));
+      break;
+      case 17:
+      Display(arr1);
+      break;
+      case 18:
       printf("Exitting Program...\n");
       break;
       default:
       printf("Wrong Choice\n");
     }
-  }while(ch!=16);
+  }while(ch!=18);
   return 0;
 }
