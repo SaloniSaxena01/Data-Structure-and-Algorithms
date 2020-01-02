@@ -395,12 +395,15 @@ int main()
   {
     printf("\n\nMenu\n");
     printf("1. Insert\n");
-    printf("2. Delete\n");
-    printf("3. Search\n");
-    printf("4. Sum\n");
-    printf("5. Display\n");
-    printf("6.Exit\n");
-    printf("enter you choice ");
+    printf("2. Append\n");
+    printf("3. Delete\n");
+    printf("4. Linear Search\n");
+    printf("5. Binary Search\n");
+    printf("6. Recursive Binary Search\n");
+    printf("7. Sum\n");
+    printf("8. Display\n");
+    printf("9.Exit\n");
+    printf("Enter you choice ");
     scanf("%d",&ch);
     switch(ch)
     {
@@ -410,29 +413,46 @@ int main()
       Insert(&arr1,index,x);
       break;
       case 2:
+      printf("Enter an element");
+      scanf("%d",&x);
+      Append(&arr1,x);
+      break;
+      case 3:
       printf("Enter index ");
       scanf("%d",&index);
       x=Delete(&arr1,index);
       printf("Deleted Element is %d\n",x);
       break;
-      case 3:
+      case 4:
       printf("Enter element to search ");
       scanf("%d",&x);
       index=LinearSearch(&arr1,x);
       printf("Element index %d",index);
       break;
-      case 4:
-      printf("Sum is %d\n",Sum(arr1));
-      break;
       case 5:
-      Display(arr1);
+      printf("Enter element to search ");
+      scanf("%d",&x);
+      index=BinarySearch(arr1,x);
+      printf("Element index %d",index);
       break;
       case 6:
+      printf("Enter element to search ");
+      scanf("%d",&x);
+      index=RecursiveBinarySearch(arr1.A,0,arr1.length,x);
+      printf("Element index %d",index);
+      break;
+      case 7:
+      printf("Sum is %d\n",Sum(arr1));
+      break;
+      case 8:
+      Display(arr1);
+      break;
+      case 9:
       printf("Exitting Program...\n");
       break;
       default:
       printf("Wrong Choice\n");
     }
-  }while(ch!=6);
+  }while(ch!=9);
   return 0;
 }
