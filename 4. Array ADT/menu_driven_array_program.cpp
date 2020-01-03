@@ -419,8 +419,10 @@ int main()
     cout<<"11. Average\n";
     cout<<"12. Reverse array\n";
     cout<<"13. Reverse array by swapping\n";
-    cout<<"14. Display\n";
-    cout<<"15. Exit\n";
+    cout<<"14. Insert in sorted array to keep sorted\n";
+    cout<<"15. Check if array is sorted\n";
+    cout<<"16. Display\n";
+    cout<<"17. Exit\n";
     cout<<"Enter you choice : ";
     cin>>ch;
     switch(ch)
@@ -482,14 +484,22 @@ int main()
       arr1->Reverse2();
       break;
       case 14:
-      arr1->Display();
+      cout<<"Enter an element : ";
+      cin>>x;
+      arr1->InsertSort(x);
       break;
       case 15:
+      cout<<"Is array sorted? "<<arr1->isSorted();
+      break;
+      case 16:
+      arr1->Display();
+      break;
+      case 17:
       cout<<"Exitting program...\n";
       break;
       default:
       cout<<"Wrong Choice\n";
     }
-  }while(ch!=15);
+  }while(ch!=17);
   return 0;
 }
