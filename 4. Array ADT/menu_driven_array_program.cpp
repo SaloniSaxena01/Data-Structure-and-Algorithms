@@ -399,7 +399,7 @@ int main()
   int ch,sz;
   int x,index;
 
-  cout<<"Enter Size of Array";
+  cout<<"Enter Size of Array : ";
   scanf("%d",&sz);
   arr1=new Array(sz);
 
@@ -407,11 +407,20 @@ int main()
   {
     cout<<"\n\nMenu\n";
     cout<<"1. Insert\n";
-    cout<<"2. Delete\n";
-    cout<<"3. Search\n";
-    cout<<"4. Sum\n";
-    cout<<"5. Display\n";
-    cout<<"6. Exit\n";
+    cout<<"2. Append\n";
+    cout<<"3. Delete\n";
+    cout<<"4. Linear Search\n";
+    cout<<"5. Binary Search\n";
+    cout<<"6. Get Element at index\n";
+    cout<<"7. Set Element at index\n";
+    cout<<"8. Maximum Element\n";
+    cout<<"9. Minimum Element\n";
+    cout<<"10. Sum\n";
+    cout<<"11. Average\n";
+    cout<<"12. Reverse array\n";
+    cout<<"13. Reverse array by swapping\n";
+    cout<<"14. Display\n";
+    cout<<"15. Exit\n";
     cout<<"Enter you choice : ";
     cin>>ch;
     switch(ch)
@@ -422,22 +431,65 @@ int main()
       arr1->Insert(index,x);
       break;
       case 2:
+      cout<<"Enter an element : ";
+      cin>>x;
+      arr1->Append(x);
+      break;
+      case 3:
       cout<<"Enter index : ";
       cin>>index;
       x=arr1->Delete(index);cout<<"Deleted Element is : "<<x;
       break;
-      case 3:
+      case 4:
       cout<<"Enter element to search : ";
       cin>>x;
       index=arr1->LinearSearch(x);
       cout<<"Element index : "<<index;
       break;
-      case 4:
+      case 5:
+      cout<<"Enter element to search : ";
+      cin>>x;
+      index=arr1->BinarySearch(x);
+      cout<<"Element index : "<<index;
+      break;
+      case 6:
+      cout<<"Enter index to fetch : ";
+      cin>>index;
+      x=arr1->Get(index);
+      cout<<"Element at index "<<index<<" is : "<<x;
+      break;
+      case 7:
+      cout<<"Enter an element and index : ";
+      cin>>x>>index;
+      arr1->Set(index,x);
+      break;
+      case 8:
+      cout<<"Maximum element in array is : "<<arr1->Max();
+      break;
+      case 9:
+      cout<<"Minimum element in array is : "<<arr1->Min();
+      break;
+      case 10:
       cout<<"Sum is : "<<arr1->Sum();
       break;
-      case 5:
+      case 11:
+      cout<<"Average is : "<<arr1->Avg();
+      break;
+      case 12:
+      arr1->Reverse();
+      break;
+      case 13:
+      arr1->Reverse2();
+      break;
+      case 14:
       arr1->Display();
+      break;
+      case 15:
+      cout<<"Exitting program...\n";
+      break;
+      default:
+      cout<<"Wrong Choice\n";
     }
-  }while(ch<6);
+  }while(ch!=15);
   return 0;
 }
