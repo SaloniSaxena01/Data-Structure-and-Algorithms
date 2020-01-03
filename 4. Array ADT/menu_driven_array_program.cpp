@@ -256,28 +256,6 @@ int i;
   return 1;
 }
 
-void Array::Rearrange()
-{
-  int i,j;
-  i=0;
-  j= length-1;
-  while(i<j)
-  {
-    while( A[i]<0)
-    {
-      i++;
-    }
-    while( A[j]>=0)
-    {
-      j--;
-    }
-    if(i<j)
-    {
-      swap(& A[i],& A[j]);
-    }
-  }
-}
-
 Array* Array::Merge(Array arr2)
 {
   int i,j,k;
@@ -421,8 +399,8 @@ int main()
     cout<<"13. Reverse array by swapping\n";
     cout<<"14. Insert in sorted array to keep sorted\n";
     cout<<"15. Check if array is sorted\n";
-    cout<<"16. Display\n";
-    cout<<"17. Exit\n";
+    cout<<"100. Display\n";
+    cout<<"0. Exit\n";
     cout<<"Enter you choice : ";
     cin>>ch;
     switch(ch)
@@ -491,15 +469,15 @@ int main()
       case 15:
       cout<<"Is array sorted? "<<arr1->isSorted();
       break;
-      case 16:
+      case 100:
       arr1->Display();
       break;
-      case 17:
+      case 0:
       cout<<"Exitting program...\n";
       break;
       default:
       cout<<"Wrong Choice\n";
     }
-  }while(ch!=17);
+  }while(ch!=0);
   return 0;
 }
