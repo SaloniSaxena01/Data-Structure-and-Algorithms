@@ -411,29 +411,29 @@ int main()
     cout<<"3. Search\n";
     cout<<"4. Sum\n";
     cout<<"5. Display\n";
-    cout<<"6.Exit\n";
-    cout<<"enter you choice ";
+    cout<<"6. Exit\n";
+    cout<<"Enter you choice : ";
     cin>>ch;
     switch(ch)
     {
       case 1:
-      cout<<"Enter an element and index ";
+      cout<<"Enter an element and index : ";
       cin>>x>>index;
       arr1->Insert(index,x);
       break;
       case 2:
-      cout<<"Enter index ";
+      cout<<"Enter index : ";
       cin>>index;
-      x=arr1->Delete(index);cout<<"Deleted Element is"<<x;
+      x=arr1->Delete(index);cout<<"Deleted Element is : "<<x;
       break;
       case 3:
-      cout<<"Enter element to search";
+      cout<<"Enter element to search : ";
       cin>>x;
       index=arr1->LinearSearch(x);
-      cout<<"Element index "<<index;
+      cout<<"Element index : "<<index;
       break;
       case 4:
-      cout<<"Sum is "<<arr1->Sum();
+      cout<<"Sum is : "<<arr1->Sum();
       break;
       case 5:
       arr1->Display();
