@@ -10,7 +10,7 @@ void find_missing_element(int array[],int left,int right,int number)
     {
       while (diff<array[i]-i)
       {
-        printf("Missing element is : %d",i+diff);
+        printf("Missing element is : %d\n",i+diff);
         diff++;
       }
     }
