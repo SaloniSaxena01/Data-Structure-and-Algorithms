@@ -53,6 +53,8 @@ Data Structure and Algorithms
 └── README.md                             # Readme file
 ```
 
+**Permutation of string under the topic 5.String is to be updated.**
+
 ## Open for Contribution
 
 1. Fork the repository and then clone it. For cloning command is:
