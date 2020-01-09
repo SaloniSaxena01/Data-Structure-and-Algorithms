@@ -9,48 +9,57 @@
 ```
 Data Structure and Algorithms
 ├── 1. Some Essential Concepts
-|   ├── array.c                           # Array code in C
-|   ├── Array.md                          # Information for array
-|   ├── class(transformation).cpp         # Converting structure to class
-|   ├── classandconstructor.cpp           # Classes in c++
-|   ├── pointer.c                         # Pointer code in C
-|   ├── pointer.cpp                       # Pointer code in C++
-|   ├── pointer.md                        # Information for pointer
-|   ├── pointertostructure.cpp            # Pointer to Structure code in C++
-|   ├── pointertostructure2.cpp           # Pointer to Structure code in C++
-|   ├── refrence.cpp                      # Refrence code in C++
-|   ├── refrence.md                       # Information for refrence
-|   ├── structure.c                       # Structure code in C
-|   ├── structure.md                      # Information for structure
-|   ├── structureandfunction.cpp          # Using structure and functions
-│   └── template.md                       # Template in c++
+|   ├── array.c                           
+|   ├── Array.md                          
+|   ├── class(transformation).cpp         
+|   ├── classandconstructor.cpp           
+|   ├── pointer.c                         
+|   ├── pointer.cpp                       
+|   ├── pointer.md                        
+|   ├── pointertostructure.cpp            
+|   ├── pointertostructure2.cpp           
+|   ├── refrence.cpp                      
+|   ├── refrence.md                       
+|   ├── structure.c                       
+|   ├── structure.md                      
+|   ├── structureandfunction.cpp          
+│   └── template.md                       
 |
 ├── 2. Recursion
 |   ├── Programs
-|   |   ├── factorial.c                   # Factorial program
-|   |   ├── fibonacci_iterative.c         # Fibonacci using iteration
-|   |   ├── fibonacci_recursive.c         # Fibonacci using recursion
-|   |   ├── power.c                       # Power using recursion
-|   |   ├── sum_of_first_n.c              # Sum of n number using recursion
-|   |   ├── taylor_series_moner's_rule.c  # Taylor Series
-|   |   ├── taylor_series.c               # Taylor Series
-|   |   └── taylor_series_iterative.c     # Taylor Series
+|   |   ├── factorial.c                   
+|   |   ├── fibonacci_iterative.c         
+|   |   ├── fibonacci_recursive.c         
+|   |   ├── power.c                       
+|   |   ├── sum_of_first_n.c              
+|   |   ├── taylor_series_moner's_rule.c  
+|   |   ├── taylor_series.c               
+|   |   └── taylor_series_iterative.c     
 |   |
-|   ├── indirect_recursion.c              # Indirect Recursion
-|   ├── indirect_recursion.PNG            # Image Refrence
-|   ├── nested_recursion.c                # Nested Recursion
-|   ├── nested_recursion.PNG              # Image Refrence
-|   ├── recursion.c                       # Recursion
-|   ├── static_global_variable.c          # Static & Global variable in recursion
-|   ├── tailhead.c                        # Tail and Head Recursion
-|   ├── tree_recursion.c                  # Tree Recursion
-│   └── tree_recursion.PNG                # Image Refrence
+|   ├── indirect_recursion.c              
+|   ├── indirect_recursion.PNG            
+|   ├── nested_recursion.c                
+|   ├── nested_recursion.PNG              
+|   ├── recursion.c                       
+|   ├── static_global_variable.c           
+|   ├── tailhead.c                        
+|   ├── tree_recursion.c                  
+│   └── tree_recursion.PNG                
+|
+├── 3. Array Representation
+|   ├── 2d_array.c                       
+|   ├── array.c                          
+|   ├── increasing_array_size.c          
+|   ├── increasing_array_size.cpp        
+|   ├── README.md                    
+|   ├── static_and_dynamic_array.c          
+│   └── static_and_dynamic_array.cpp
 │
-├── DatastructureandAlgorithm.png         # Thumbnail for readme
+├── DatastructureandAlgorithm.png        
 │
-├── LICENSE                               # License for use
+├── LICENSE                              
 │
-└── README.md                             # Readme file
+└── README.md                            
 ```
 
 **Permutation of string under the topic 5.String is to be updated.**
