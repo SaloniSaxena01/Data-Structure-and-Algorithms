@@ -54,6 +54,31 @@ Data Structure and Algorithms
 |   ├── README.md                    
 |   ├── static_and_dynamic_array.c          
 │   └── static_and_dynamic_array.cpp
+|
+├── 4. Array ADT
+|   ├── README.md                      
+|   ├── array.c                        
+|   ├── array_program_using_class.cpp       
+|   ├── binary_search.c           
+|   ├── checking_sorted.c                     
+|   ├── delete_from_array.c                      
+|   ├── finding_duplicates_in_sorted_array.c                   
+|   ├── finding_duplicates_in_sorted_array_hashing.c           
+|   ├── finding_duplicates_in_unsorted_array.c          
+|   ├── finding_max_and_min_in_single_scan.cpp      
+|   ├── finding_missing_array_element.c                       
+|   ├── finding_multiple_missing_array_element_sorted_array.c           
+|   ├── finding_pair_with_sum.c          
+|   ├── finding_pair_with_sum_in_sorted_array.c
+|   ├── finding_single_missing_array_element_sorted_array.c                     
+|   ├── get_set_average_max_function.c           
+|   ├── insert_in_array.c         
+|   ├── linear_search.c                
+|   ├── menu_driven_array_program.c                   
+|   ├── menu_driven_array_program.cpp                      
+|   ├── merging_sorted_array.c                    
+|   ├── reverse_array.c        
+│   └── set_operations_on_array.c
 │
 ├── DatastructureandAlgorithm.png        
 │
