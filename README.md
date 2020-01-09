@@ -79,6 +79,25 @@ Data Structure and Algorithms
 |   ├── merging_sorted_array.c                    
 |   ├── reverse_array.c        
 │   └── set_operations_on_array.c
+|
+├── 5. String
+|   ├── README.md                     
+|   ├── changing_case_of_string.c                       
+|   ├── checking_anagram.c         
+|   ├── checking_palindrome.c      
+|   ├── checking_palindrome_string.c                
+|   ├── comparing_strings.c
+|   ├── counting_vovels_and_consonants.c      
+|   ├── counting_words_in_string.c     
+|   ├── finding_duplicate_elements.c      
+|   ├── finding_duplicates_using_bits.c                   
+|   ├── finding_length_of_string.c            
+|   ├── <!--permutations_of_string.c-->                         
+|   ├── reversing_a_string.c          
+|   ├── reversing_string.c      
+|   ├── string.c                 
+|   ├── toogle_case_of_string.c       
+│   └── validating_a_string.c
 │
 ├── DatastructureandAlgorithm.png        
 │
