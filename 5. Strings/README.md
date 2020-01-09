@@ -21,3 +21,5 @@ ASCII code is stored in 1 byte in main memory.
 Supports all natural languages
 
 Stored in 2 bytes in main memory. Represented in form of hexadecimal code. So these are represented in 4 digits of hexadecimal.
+
+> '\0' is the end of string character also known as String Delimeter, NULL Character or String Terminator.
