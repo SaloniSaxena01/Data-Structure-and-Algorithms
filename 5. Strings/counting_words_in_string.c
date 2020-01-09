@@ -6,7 +6,7 @@ int main()
   int i,word=1;
   for(i=0;a[i]!='\0';i++)
   {
-    if(a[i]==' ')
+    if(a[i]==' ' && a[i-1]!=' ')//Second condition for white space.
     {
       word++;
     }
