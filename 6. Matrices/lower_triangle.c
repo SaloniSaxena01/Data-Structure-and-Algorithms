@@ -33,7 +33,7 @@ void Set(struct Matrix *m,int i,int j,int x)
   }
 }
 
-void Get(struct Matrix m,int i,int j)
+int Get(struct Matrix m,int i,int j)
 {
   if(i>=j)
   {
