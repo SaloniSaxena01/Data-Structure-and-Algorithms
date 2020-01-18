@@ -108,6 +108,8 @@ Data Structure and Algorithms
 
 **Permutation of string under the topic 5.String is to be updated.**
 
+**Toeplitz Matrix under the topic 6.Matrices is to be updated.**
+
 ## Open for Contribution
 
 1. Fork the repository and then clone it. For cloning command is:
