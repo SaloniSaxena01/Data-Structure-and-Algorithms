@@ -15,3 +15,11 @@ We use first row to store dimensions of the matrix as well as the number of non-
 ## Compressed Sparse Row
 
 Sparsed Matrix is represented using three arrays. First lists non-zero elements, second array for rows with starting value 0 and then the cummulative the number of non-zero elements as present in the row and third array representing the column number corresponding to the element in first array.
+
+# Polynomials
+
+## Polynomial Representation
+
+Polynomial is nothing but collection of terms. Every term is having a coefficient, a variable and an exponent.
+
+So, polynomial can be represented as a list of terms having coefficient and exponent.
